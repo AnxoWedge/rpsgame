@@ -14,7 +14,7 @@ except socket.error as e:  # Erro de conexao
     str(e)
 
 s.listen(2) #Espera pela conexao
-print("Waiting for a connection, Server Started")
+print("Servidor foi iniciado com sucesso! Á espera dos jogadores...")
 
 connected = set() #Defenir variaveis
 games = {}        #Defenir variaveis
@@ -48,10 +48,10 @@ def threaded_client(conn, p, gameId): #Funcao para criar uma thread de 3 paramet
             break
 
     # Caso perca a conexao o jogo acaba
-    print("Lost connection")
+    print("Conexão foi perdida")
     try:
         del games[gameId]
-        print("Closing Game", gameId)
+        print("A fechar jogo...", gameId)
     except:         #caso nao feche o jogo desaparece com a conexao
         pass
     idCount -= 1
@@ -61,7 +61,7 @@ def threaded_client(conn, p, gameId): #Funcao para criar uma thread de 3 paramet
 
 while True:         #aceitação do tcp conexao cliente ao servidor
     conn, addr = s.accept()
-    print("Connected to:", addr)
+    print("Conectado a:", addr)
 
 #Cria o jogo quando existir 2 clienter conectados ao servidor
     idCount += 1
@@ -69,7 +69,7 @@ while True:         #aceitação do tcp conexao cliente ao servidor
     gameId = (idCount - 1)//2
     if idCount % 2 == 1:
         games[gameId] = Game(gameId)
-        print("Creating a new game...")
+        print("A criar um novo jogo...")
     else: #Se o game tiver criado ele inicia o jogo
         games[gameId].ready = True
         p = 1

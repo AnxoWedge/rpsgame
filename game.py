@@ -57,8 +57,6 @@ class Game:
         p1 = self.moves[0].upper()[0]
         # Movimento do player 2
         p2 = self.moves[1].upper()[0]
-        print(p1)
-        print(p2)
         winner = -1
         #Se player 1 jogar rocha contra tesoura do player 2
         if p1 == "R" and p2 == "T":

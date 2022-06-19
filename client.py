@@ -48,7 +48,7 @@ class Button:
             return False
 
 #
-# Redesnho da janela depois da página principal 
+# Redesenho da janela depois da página principal 
 #
 
 def redrawWindow(win, game, p):
