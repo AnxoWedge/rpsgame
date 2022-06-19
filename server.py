@@ -3,7 +3,7 @@ from _thread import *
 import pickle
 from game import Game #Importar ficheiro Game.py
 
-server = "localhost"  #IP do servidor
+server = "188.166.123.78"  #IP do servidor
 port = 5555           #Numero de porta na qual o servidor estara esperando conexoes
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Criar o socket do TCP

@@ -5,7 +5,7 @@ import pickle                                                                   
 class Network:                                                                  #Define a classe
     def __init__(self):
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         #Define a família do endereço e o tipo Sock_strem, definido como protocolo TCP
-        self.server = "localhost"                                               #Aribuição do ip/localhost
+        self.server = "188.166.123.78"                                               #Aribuição do ip/localhost
         self.port = 5555                                                        #Define explicitamente a porta aberta
         self.addr = (self.server, self.port)                                    #Atribuição do ip e porta ao endereço
         self.p = self.connect()                                                 #Conexão com servidor
