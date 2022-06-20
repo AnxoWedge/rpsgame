@@ -1,3 +1,4 @@
+# Ângelo Cunha nº20202537
 # Importadção da biblioteca pygame e do Network
 import pygame 
 from network import Network
@@ -51,7 +52,7 @@ class Button:
 # Redesenho da janela depois da página principal 
 #
 
-def redrawWindow(win, game, p):
+def windowUpdate(win, game, p):
     win.fill((190, 233, 232)) # Background da Janela 
 
     # Senão o jogo não tiver conectado / Waiting for player
@@ -122,7 +123,7 @@ def main():
             break
 
         if game.bothWent():
-            redrawWindow(win, game, player) # Desenho e redesenho da janela para continuar o jogo 
+            windowUpdate(win, game, player) # Desenho e redesenho da janela para continuar o jogo 
             pygame.time.delay(500) # Delay para permitir a fluidez 
             try:
                 game = n.send("reset") # Reset depois de jogarem 
@@ -159,12 +160,12 @@ def main():
                             if not game.p2Went:
                                 n.send(btn.text)
 
-        redrawWindow(win, game, player) #Redesenho da Janela
+        windowUpdate(win, game, player) #Redesenho da Janela
 
 #
 # Menu do jogo / página principal
 #
-def menu_screen():
+def menuPrincipal():
     run = True #Run true
     clock = pygame.time.Clock()
 
@@ -188,4 +189,4 @@ def menu_screen():
 
 # Screen peincipal
 while True:
-    menu_screen()
+    menuPrincipal()

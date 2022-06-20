@@ -1,3 +1,5 @@
+# Luis Fernandes   nº20202586
+
 import socket         #Importar a bibliotecas
 from _thread import *
 import pickle

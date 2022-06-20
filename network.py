@@ -1,3 +1,4 @@
+#Fernando Araújo  nº20131799
 import socket                                                                   #Importação que define que sepode utilizar sockets no programa
 import pickle                                                                   #Utiliza a representação binária para o formato de fluxo de dados
 

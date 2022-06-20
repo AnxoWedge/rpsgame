@@ -1,3 +1,4 @@
+#José Gonçalves   nº20202462
 # Classe Jogo
 class Game:
     # Função de começo com os parametros self e identificador
